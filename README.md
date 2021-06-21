@@ -1,1 +1,2 @@
 # monster-fighter
+You can access the project's raw code in the other file found in this branch. If you wish to run this project on your computer, you can access all of the required NetBeans files in the master project. To do so, click on the button around the top left titled main, and select master. Download those files and place them in your root NetBeans folder, and they should be fully runnable.
