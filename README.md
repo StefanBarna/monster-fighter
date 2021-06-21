@@ -25,4 +25,6 @@ The project features 3 methods of storing information. The first involves manipu
 ![image](https://user-images.githubusercontent.com/59585745/122838574-51a31f80-d2c4-11eb-8376-0c0e6df7c0a6.png)
 ![image](https://user-images.githubusercontent.com/59585745/122838595-5e277800-d2c4-11eb-953c-56deee763cc6.png)
 ![image](https://user-images.githubusercontent.com/59585745/122838690-9929ab80-d2c4-11eb-9383-2ab89cecde3a.png)
-
+![image](https://user-images.githubusercontent.com/59585745/122838753-b8c0d400-d2c4-11eb-86a4-3f90562a744c.png)
+![image](https://user-images.githubusercontent.com/59585745/122838770-c24a3c00-d2c4-11eb-9444-8da75d08d292.png)
+![image](https://user-images.githubusercontent.com/59585745/122838804-cd04d100-d2c4-11eb-805c-5cfa62297350.png)
