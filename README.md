@@ -1,5 +1,5 @@
 # Monster Fighter
-You can access the project's raw code in the other file found in this branch. If you wish to run this project on your computer, you can access all of the required NetBeans files in the master project. To do so, click on the button around the top left titled main, and select master. Download those files and place them in your root NetBeans folder, and they should be fully runnable. To find a full documentation of the methods you will find in the project, what they do, and their headers, access the Wiki tab in the toolbar at the top of the repository.
+You can access the project's raw code in the .java file found in this branch. If you wish to run this project on your computer, you can access all of the required NetBeans files in the master project. To do so, click on the button around the top left titled main, and select master. Download those files and place them in your root NetBeans folder, and they should be fully runnable. To find a full documentation of the methods you will find in the project, what they do, and their headers, access the Wiki tab in the toolbar at the top of the repository.
 
 ### The Game's Rules
 #### What is this project?
@@ -20,3 +20,9 @@ The project features 3 methods of storing information. The first involves manipu
 
 ### Top-Down Design
 ![image](https://user-images.githubusercontent.com/59585745/122836829-08050580-d2c1-11eb-84e7-adfd779e7f0a.png)
+
+### Game Screenshots
+![image](https://user-images.githubusercontent.com/59585745/122838574-51a31f80-d2c4-11eb-8376-0c0e6df7c0a6.png)
+![image](https://user-images.githubusercontent.com/59585745/122838595-5e277800-d2c4-11eb-953c-56deee763cc6.png)
+![image](https://user-images.githubusercontent.com/59585745/122838690-9929ab80-d2c4-11eb-9383-2ab89cecde3a.png)
+
