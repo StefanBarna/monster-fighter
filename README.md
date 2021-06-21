@@ -14,4 +14,5 @@ The goal for this project was to create a simple turn-based combat system in whi
 
 #### How does this project implement a database?
 
-### Top-Down Design
+#### Top-Down Design
+![image](https://user-images.githubusercontent.com/59585745/122836829-08050580-d2c1-11eb-84e7-adfd779e7f0a.png)
