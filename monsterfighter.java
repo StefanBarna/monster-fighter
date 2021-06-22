@@ -294,29 +294,6 @@ public class gameScreen extends javax.swing.JFrame {
         
         updateLabels();
     }
-        
-    /*
-    attack
-    
-    This method receives the attacker and the defender, and deals
-    damage based on the attacker's ATK stat and the defender's 
-    DEF stat to the defender. Returns true if defender lives, false
-    if it dies.
-    
-    Receives: character, character
-    
-    Returns: boolean
-    */
-    public boolean attack(character attacker, character defender) {
-        // how much damage the defender will take
-        int damage;
-        damage = attacker.attack();         // calculate raw damage
-        damage -= defender.defend(damage);  // calculate mitidaged damage
-        if (defender.takeDamage(damage))    // defender takes damage
-            return true;
-        else
-            return false;
-    }
     
     /*
     save
@@ -362,6 +339,29 @@ public class gameScreen extends javax.swing.JFrame {
             lblMonsterAction.setText("");
             lblMonsterCalculation.setText("");
         }
+    }
+    
+    /*
+    attack
+    
+    This method receives the attacker and the defender, and deals
+    damage based on the attacker's ATK stat and the defender's 
+    DEF stat to the defender. Returns true if defender lives, false
+    if it dies.
+    
+    Receives: character, character
+    
+    Returns: boolean
+    */
+    public boolean attack(character attacker, character defender) {
+        // how much damage the defender will take
+        int damage;
+        damage = attacker.attack();         // calculate raw damage
+        damage -= defender.defend(damage);  // calculate mitidaged damage
+        if (defender.takeDamage(damage))    // defender takes damage
+            return true;
+        else
+            return false;
     }
     
     /*
