@@ -29,13 +29,13 @@
                   <Component id="pnlMonsterImg" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="pnlPlayerStats" min="-2" pref="89" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="pnlMonsterStats" min="-2" pref="94" max="-2" attributes="0"/>
+                      <Component id="pnlMonsterStats" min="-2" pref="92" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="pnlPlayerOptions" pref="189" max="32767" attributes="0"/>
+                  <Component id="pnlPlayerOptions" min="-2" pref="189" max="-2" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -74,7 +74,7 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btnRecover" max="32767" attributes="0"/>
+                      <Component id="btnRecover" pref="78" max="32767" attributes="0"/>
                       <Component id="btnAttack" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -196,27 +196,21 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Component id="lblMonsterHPVal" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblMonsterDEFVal" min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="lblMonsterATKVal" min="-2" pref="25" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="lblMonsterDEFVal" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="lblMonsterATKVal" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lblMonsterHPVal" min="-2" pref="42" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblMonsterName" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblMonsterLevel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="33" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="lblMonsterName" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblMonsterLevel" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -228,23 +222,21 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="lblMonsterLevel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="lblMonsterHPVal" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="lblMonsterATKVal" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="lblMonsterDEFVal" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="lblMonsterHP" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="lblMonsterATK" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="lblMonsterDEF" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblMonsterHP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblMonsterHPVal" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblMonsterATK" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblMonsterATKVal" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblMonsterDEF" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblMonsterDEFVal" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="34" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -418,30 +410,17 @@
                               <Component id="lblPlayerATK" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="lblPlayerDEF" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="lblPlayerHPVal" min="-2" pref="38" max="-2" attributes="0"/>
-                                  <EmptySpace pref="12" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblPlayerATKVal" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="lblPlayerDEFVal" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                              </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="lblPlayerHPVal" pref="38" max="32767" attributes="0"/>
+                              <Component id="lblPlayerATKVal" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lblPlayerDEFVal" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblPlayerName" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblPlayerLevel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="lblPlayerName" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblPlayerLevel" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -453,7 +432,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="lblPlayerLevel" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblPlayerHP" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lblPlayerHPVal" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -463,14 +442,14 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="lblPlayerDEF" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           <Component id="lblPlayerATKVal" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="lblPlayerDEFVal" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="34" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

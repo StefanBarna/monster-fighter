@@ -167,14 +167,14 @@ public class gameScreen extends javax.swing.JFrame {
     public final int[] MONSTER_HP = {30, 20, 15, 5, 5, 200};
     
     // signals 
-   public final int ATTACK = 1;
+    public final int ATTACK = 1;
     public final int RECOVER = 2;
     public final int SAVE = 3;
     public final int RESET = 4;
 
     // player and monster variables
-    character player;
-    character monster;
+    private character player;
+    private character monster;
     
     /**
      * Creates new form gameScreen
@@ -271,7 +271,7 @@ public class gameScreen extends javax.swing.JFrame {
             .addGroup(pnlPlayerOptionsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlPlayerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnRecover, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnRecover, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
                     .addComponent(btnAttack, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlPlayerOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -338,19 +338,15 @@ public class gameScreen extends javax.swing.JFrame {
                         .addGroup(pnlMonsterStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlMonsterStatsLayout.createSequentialGroup()
                                 .addGap(28, 28, 28)
-                                .addComponent(lblMonsterHPVal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(9, 9, 9))
+                                .addGroup(pnlMonsterStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblMonsterDEFVal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblMonsterATKVal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMonsterStatsLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(pnlMonsterStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(lblMonsterDEFVal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblMonsterATKVal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap())))
-                    .addGroup(pnlMonsterStatsLayout.createSequentialGroup()
-                        .addGroup(pnlMonsterStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblMonsterName)
-                            .addComponent(lblMonsterLevel))
-                        .addContainerGap(33, Short.MAX_VALUE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblMonsterHPVal, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(lblMonsterName)
+                    .addComponent(lblMonsterLevel))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlMonsterStatsLayout.setVerticalGroup(
             pnlMonsterStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -360,20 +356,18 @@ public class gameScreen extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblMonsterLevel)
                 .addGap(18, 18, 18)
-                .addGroup(pnlMonsterStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlMonsterStatsLayout.createSequentialGroup()
-                        .addComponent(lblMonsterHPVal)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblMonsterATKVal)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblMonsterDEFVal))
-                    .addGroup(pnlMonsterStatsLayout.createSequentialGroup()
-                        .addComponent(lblMonsterHP)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblMonsterATK)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblMonsterDEF)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(pnlMonsterStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblMonsterHP)
+                    .addComponent(lblMonsterHPVal))
+                .addGap(18, 18, 18)
+                .addGroup(pnlMonsterStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblMonsterATK)
+                    .addComponent(lblMonsterATKVal))
+                .addGap(18, 18, 18)
+                .addGroup(pnlMonsterStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblMonsterDEF)
+                    .addComponent(lblMonsterDEFVal))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pnlDescriptiveLabels.setBackground(new java.awt.Color(238, 238, 253));
@@ -461,22 +455,14 @@ public class gameScreen extends javax.swing.JFrame {
                             .addComponent(lblPlayerHP)
                             .addComponent(lblPlayerATK)
                             .addComponent(lblPlayerDEF))
-                        .addGroup(pnlPlayerStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlPlayerStatsLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblPlayerHPVal, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(12, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPlayerStatsLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(pnlPlayerStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblPlayerATKVal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblPlayerDEFVal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap())))
-                    .addGroup(pnlPlayerStatsLayout.createSequentialGroup()
-                        .addGroup(pnlPlayerStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblPlayerName)
-                            .addComponent(lblPlayerLevel))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnlPlayerStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblPlayerHPVal, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                            .addComponent(lblPlayerATKVal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblPlayerDEFVal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(lblPlayerName)
+                    .addComponent(lblPlayerLevel))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlPlayerStatsLayout.setVerticalGroup(
             pnlPlayerStatsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -500,7 +486,7 @@ public class gameScreen extends javax.swing.JFrame {
                         .addComponent(lblPlayerATKVal)
                         .addGap(18, 18, 18)
                         .addComponent(lblPlayerDEFVal)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pnlMonsterImg.setBackground(new java.awt.Color(248, 248, 255));
@@ -526,12 +512,12 @@ public class gameScreen extends javax.swing.JFrame {
                     .addComponent(pnlDescriptiveLabels, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
                     .addComponent(pnlMonsterImg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(pnlPlayerStats, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pnlMonsterStats, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(pnlPlayerOptions, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)))
+                        .addComponent(pnlMonsterStats, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pnlPlayerOptions, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -549,18 +535,22 @@ public class gameScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
+    // tell program to save
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         turn(SAVE);
     }//GEN-LAST:event_btnSaveActionPerformed
 
+    // tell program to reset save
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         turn(RESET);
     }//GEN-LAST:event_btnResetActionPerformed
 
+    // tell program player wants to attack
     private void btnAttackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAttackActionPerformed
         turn(ATTACK);
     }//GEN-LAST:event_btnAttackActionPerformed
 
+    // tell program player wants to recover
     private void btnRecoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecoverActionPerformed
         turn(RECOVER);
     }//GEN-LAST:event_btnRecoverActionPerformed
@@ -602,7 +592,7 @@ public class gameScreen extends javax.swing.JFrame {
     */
     public void updateLabels() {
         // set player values
-        lblPlayerName.setText(player.getName());
+        lblPlayerName.setText("Player");
         lblPlayerLevel.setText("lvl " + player.getLevel());
         lblPlayerHPVal.setText(player.getCurrentHealth() + "/" + player.getMaxHealth());
         lblPlayerATKVal.setText(String.valueOf(player.getAttack()));
@@ -622,8 +612,8 @@ public class gameScreen extends javax.swing.JFrame {
     /*
     load
     
-    This method is called at the start of the class to get the contents of
-    the save file and load it to the player and monster.
+    This method gets the contents of a save file and load it to the 
+    player and monster.
     
     Receives: void
      
@@ -663,33 +653,13 @@ public class gameScreen extends javax.swing.JFrame {
                         Integer.parseInt(buffer.readLine()));
             }
         } catch (IOException e) {
-            System.out.println("[error loading save file]");
+            lblPlayerAction.setText("[error loading save file]");
+            lblPlayerCalculation.setText("");
+            lblMonsterAction.setText("");
+            lblMonsterCalculation.setText("");
         }
         
         updateLabels();
-    }
-        
-    /*
-    attack
-    
-    This method receives the attacker and the defender, and deals
-    damage based on the attacker's ATK stat and the defender's 
-    DEF stat to the defender. Returns true if defender lives, false
-    if it dies.
-    
-    Receives: character, character
-    
-    Returns: boolean
-    */
-    public boolean attack(character attacker, character defender) {
-        // how much damage the defender will take
-        int damage;
-        damage = attacker.attack();         // raw damage
-        damage -= defender.defend(damage);  // mitidaged damage
-        if (defender.takeDamage(damage))    // take damage
-            return true;
-        else
-            return false;
     }
     
     /*
@@ -730,7 +700,10 @@ public class gameScreen extends javax.swing.JFrame {
             // close file
             svfile.close();
         } catch (IOException e) {
-            System.out.println("[error loading save file]");
+            lblPlayerAction.setText("[error loading save file]");
+            lblPlayerCalculation.setText("");
+            lblMonsterAction.setText("");
+            lblMonsterCalculation.setText("");
         }
     }
     
@@ -756,8 +729,34 @@ public class gameScreen extends javax.swing.JFrame {
             // create a new save
             load();
         } catch (IOException e) {
-            System.out.println("[error loading save file]");
+            lblPlayerAction.setText("[error loading save file]");
+            lblPlayerCalculation.setText("");
+            lblMonsterAction.setText("");
+            lblMonsterCalculation.setText("");
         }
+    }
+    
+    /*
+    attack
+    
+    This method receives the attacker and the defender, and deals
+    damage based on the attacker's ATK stat and the defender's 
+    DEF stat to the defender. Returns true if defender lives, false
+    if it dies.
+    
+    Receives: character, character
+    
+    Returns: boolean
+    */
+    public boolean attack(character attacker, character defender) {
+        // how much damage the defender will take
+        int damage;
+        damage = attacker.attack();         // raw damage
+        damage -= defender.defend(damage);  // mitidaged damage
+        if (defender.takeDamage(damage))    // take damage
+            return true;
+        else
+            return false;
     }
     
     /*
@@ -854,7 +853,7 @@ public class gameScreen extends javax.swing.JFrame {
         lblMonsterAction.setText("The " + monster.getName() + " dealt " + damage + " damage.");
         // check if player died
         if (!alive) {
-            lblMonsterAction.setText("You died.");
+            lblMonsterCalculation.setText("You died.");
             reset();
         }
         else
