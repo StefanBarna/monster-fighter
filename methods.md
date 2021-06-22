@@ -1,5 +1,6 @@
 # Class Definitions
 
+## Character Class
 ### Private Variables
 String m_name: a string value representing the unit’s name
 String m_image: a value holding the string representation of the unit’s image location
