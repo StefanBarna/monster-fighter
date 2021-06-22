@@ -4,23 +4,25 @@
 ### Private Variables
 String m_name: a string value representing the unit’s name
 
-String m_image: a value holding the string representation of the unit’s image location
+String m_image: a string holding the character's file location (null for player)
 
 int m_level: a value representing the unit’s level of power
 
 int m_attack: the value representing the unit’s damage range
 
-int m_defense: the value representing how much damage the unit is able to block
+int m_defense: the value representing how much damage the unit is able to negate
 
-int m_max_health: the value representing the unit’s current health; when this reaches 0 the unit die
+int m_max_health: the value representing the unit’s maximum health; health will not exceed this capacity
 
 int m_health: the value representing the unit’s current health; when this reaches 0 the unit dies
 
 
 ### Public Methods
-public character(): this method will create a new character with all variables set to an empty state
+public character(): creates a new character with all variables set to an empty state
 
-public character(String image, String name, int level, int attack, int defense, int max_health): this method will create a new character, setting the parameter values to its variables (this.image is assigned to image, this.name set to name, etc), and sets both health and max_health to the max_health parameter
+public character(String image, String name, int level, int attack, int defense, int max_health): this method 
+
+public character(String image, String name, int level, int attack, int defense, int max_health, int current_health): this method will create a new character, setting the parameter values to its variables (this.image is assigned to image, this.name set to name, etc), and sets both health and max_health to the max_health parameter
 
 public int attack(): this method will return how much damage the character will deal as an integer
 
