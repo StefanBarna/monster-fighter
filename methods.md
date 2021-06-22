@@ -1,7 +1,7 @@
 # Class Definitions
 
-## Character Class
-### Private Variables
+### Character Class
+#### Private Variables
 String m_name: a string value representing the unit’s name
 
 String m_image: a string holding the character's file location (null for player)
@@ -17,7 +17,7 @@ int m_max_health: the value representing the unit’s maximum health; health wil
 int m_health: the value representing the unit’s current health; when this reaches 0 the unit dies
 
 
-### Public Methods
+#### Public Methods
 public character(): creates a new character with all variables set to an empty state; default constructor
 
 public character(String image, String name, int level, int attack, int defense, int max_health): constructor used when creating a random new monster, or when the current health is irrelevant
