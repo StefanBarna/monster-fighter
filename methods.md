@@ -18,30 +18,32 @@ int m_health: the value representing the unit’s current health; when this reac
 
 
 ### Public Methods
-public character(): creates a new character with all variables set to an empty state
+public character(): creates a new character with all variables set to an empty state; default constructor
 
-public character(String image, String name, int level, int attack, int defense, int max_health): this method 
+public character(String image, String name, int level, int attack, int defense, int max_health): constructor used when creating a random new monster, or when the current health is irrelevant
 
-public character(String image, String name, int level, int attack, int defense, int max_health, int current_health): this method will create a new character, setting the parameter values to its variables (this.image is assigned to image, this.name set to name, etc), and sets both health and max_health to the max_health parameter
+public character(String image, String name, int level, int attack, int defense, int max_health, int current_health): constructor used when recreating a monster (via save file load), or when the current health is relevant
 
-public int attack(): this method will return how much damage the character will deal as an integer
+public int attack(): returns how much damage the character will deal as an integer, based on a range set by the attack variable
 
-public int defend(int damage): this method will return how much damage will be inflicted upon the character after mitigation
+public int defend(int damage): returns how much damage will be negated, based on the unit defense
 
-public boolean takeDamage(int damage): this method will change the character’s hp value based on the amount of damage inflicted; returns false if health goes below 0, true otherwise
+public boolean takeDamage(int damage): decrements the character’s hp value based on the amount of damage inflicted; returns false if health goes below 0, true otherwise
 
-public void recover(): this method will replenish the unit’s health based on a percentage of their max health and defense
+public void recover(): increments the unit’s health based on a percentage of its max health and defense
 
-public int getAttack(): this method returns the unit’s attack stat
+public void levelUp(): increments the unit's level by one, increasing appropriate stats
 
-public int getDefense(): this method returns the unit’s defense stat
+public String getName(): returns the unit’s name; name query
 
-public int getMaxHealth(): this method returns the unit’s maximum health stat
+public String getImgName(): returns the user’s file path to it’s image; file location query
 
-public int getCurrentHealth(): this method returns the unit’s current health stat
+public int getLevel(): returns the unit’s level; level query
 
-public int getLevel(): this method returns the unit’s level
+public int getAttack(): returns the unit’s attack stat; attack query
 
-public String getName(): this method returns the unit’s name
+public int getDefense(): returns the unit’s defense stat; defense query
 
-public String getImgLink(): this method returns the user’s file path to it’s image
+public int getMaxHealth(): returns the unit’s maximum health stat; max health query
+
+public int getCurrentHealth(): returns the unit’s current health stat; current health query
